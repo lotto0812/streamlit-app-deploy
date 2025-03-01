@@ -2,14 +2,13 @@
 from dotenv import load_dotenv
 load_dotenv()
 import streamlit as st
-import os
-from openai import OpenAI
 import openai
+
 # secrets.tomlファイルからAPIキーを取得
 api_key = st.secrets["OPENAI"]["OPENAI_API_KEY"]
-
 # OpenAI APIに接続
 openai.api_key = api_key
+
 from langchain_openai import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage, AIMessage
 
