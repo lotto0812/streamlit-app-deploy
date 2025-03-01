@@ -6,6 +6,7 @@ import openai
 
 # secrets.tomlファイルからAPIキーを取得
 openai.api_key = st.secrets["OPENAI"]["OPENAI_API_KEY"]
+st.write(st.secrets["nonexistent_key"])
 
 from langchain_openai import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage, AIMessage
