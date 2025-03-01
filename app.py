@@ -1,12 +1,13 @@
 
 from dotenv import load_dotenv
 load_dotenv()
-
+import streamlit as st
 import os
 from openai import OpenAI
+import openai
 api_key = os.getenv('OPENAI_API_KEY')
 client = OpenAI(api_key=api_key)
-
+openai.api_key = os.getenv('OPENAI_API_KEY')
 from langchain_openai import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage, AIMessage
 
