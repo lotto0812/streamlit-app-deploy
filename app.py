@@ -10,3 +10,4 @@ text_count = len(input_message)
 if st.button("実行"):
 
     st.write(f"文字数: **{text_count}**")
+    print("a")
