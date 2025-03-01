@@ -2,6 +2,10 @@
 from dotenv import load_dotenv
 load_dotenv()
 
+import os
+from openai import OpenAI
+api_key = os.getenv('OPENAI_API_KEY')
+client = OpenAI(api_key=api_key)
 
 from langchain_openai import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage, AIMessage
