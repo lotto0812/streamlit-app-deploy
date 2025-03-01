@@ -11,7 +11,7 @@ st.write(st.secrets["OPENAI"])
 from langchain_openai import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage, AIMessage
 
-llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0)
+llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0, api_key=openai.api_key)
 
 messages = [
     SystemMessage(content="You are a helpful assistant."),
