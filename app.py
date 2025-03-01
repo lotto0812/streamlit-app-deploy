@@ -5,9 +5,11 @@ import streamlit as st
 import os
 from openai import OpenAI
 import openai
-#api_key = os.getenv('OPENAI_API_KEY')
-#client = OpenAI(api_key=api_key)
-#openai.api_key = os.getenv('OPENAI_API_KEY')
+# secrets.tomlファイルからAPIキーを取得
+api_key = st.secrets["OPENAI"]["OPENAI_API_KEY"]
+
+# OpenAI APIに接続
+openai.api_key = api_key
 from langchain_openai import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage, AIMessage
 
