@@ -1,12 +1,12 @@
 
 from dotenv import load_dotenv
 load_dotenv()
+
 import streamlit as st
 import openai
 
 # secrets.tomlファイルからAPIキーを取得
 openai.api_key = st.secrets["OPENAI"]["OPENAI_API_KEY"]
-st.write(st.secrets["OPENAI"])
 
 from langchain_openai import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage, AIMessage
@@ -22,3 +22,4 @@ messages = [
 
 result = llm(messages)
 print(result)
+st.write(result)
