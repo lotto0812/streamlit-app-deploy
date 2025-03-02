@@ -22,4 +22,3 @@ messages = [
 
 result = llm(messages)
 print(result)
-st.write(result)
